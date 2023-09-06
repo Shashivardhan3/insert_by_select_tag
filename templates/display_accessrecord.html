@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>display_accessrecord</h1>
+
+        <table border="2px">
+
+            <tr><th>pk</th>
+                <th>Name</th>
+                <th>Authur</th>
+                <th>Date</th>
+                <th>Email</th>
+            
+            </tr>
+
+
+            {% for AO in QSAO %}
+               <tr>
+
+                 <td>{{AO.pk}}</td>
+                 <td>{{AO.name}}</td>
+                 <td>{{AO.authur}}</td>
+                 <td>{{AO.date}}</td>
+                 <td>{{AO.email}}</td>
+
+                 </tr>
+
+            {%  endfor %}
+
+
+
+
+        </table>
+    </center>
+</body>
+</html>
+
+

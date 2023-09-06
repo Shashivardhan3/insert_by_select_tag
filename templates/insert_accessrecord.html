@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Access Record</title>
+</head>
+<body>
+    <center>
+        <h1>Insert Access Record</h1>
+
+        <form method="POST">
+
+            {% csrf_token %}
+
+            <label for="tn">Topic Name</label>
+            <select name="tn" id="tn">
+                {% for topic in LTO %}
+                <option value="{{ topic.topic_name }}">{{ topic.topic_name }}</option>
+                {% endfor %}
+            </select><br>
+
+            <label for="na">Name</label>
+            <input type="text" name="na" id="na"><br>
+
+            <label for="dt">Date</label>
+            <input type="text" name="dt" id="dt"><br>
+
+            <label for="ar">Author</label>
+            <input type="text" name="ar" id="ar"><br>
+
+            <label for="em">Email</label>
+            <input type="text" name="em" id="em"><br>
+
+            <input type="submit" name="insert_accessrecord">
+        </form>
+    </center>
+</body>
+</html>
